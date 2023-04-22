@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-content">
+    <h3 class="title">Добавить студента</h3>
+    <div class="content">
+      <form #studentAddForm="ngForm" (ngSubmit)="onAddSubmit(studentAddForm)">
+        <div class="field">
+          <label class="label">Имя студента:</label>
+          <div class="control">
+            <input name="name" [(ngModel)]="name" required class="input" type="text">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">День рождения:</label>
+          <div class="control">
+            <input name="birthdate" [(ngModel)]="birthdate" required class="input" type="date">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Номер зачетки:</label>
+          <div class="control">
+            <input name="number" [(ngModel)]="number" required class="input" type="number">
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button type="submit" [disabled]="studentAddForm.invalid" class="button is-primary">Добавить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

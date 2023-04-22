@@ -1,0 +1,28 @@
+.column {
+  margin: auto;
+}
+
+button {
+  margin-left: 15%;
+}
+
+.group-card {
+  margin-top: 25px;
+}
+
+table {
+  width: 100%;
+}
+
+.tr-content {
+  transition: 0.3s;
+}
+
+.tr-content:hover {
+  background-color: #d3d3d3;
+  cursor: pointer;
+}
+
+.tr-content:focus {
+  background-color: #bdbdbd;
+}

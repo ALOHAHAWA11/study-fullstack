@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-content">
+    <h3 class="title">Редактировать группу</h3>
+    <div class="content">
+      <form #groupEditForm="ngForm" (ngSubmit)="onEditSubmit(groupEditForm)">
+        <div class="field">
+          <label class="label">Новый номер группы:</label>
+          <div class="control">
+            <input name="number" [(ngModel)]="number" required class="input" type="number">
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button type="submit" [disabled]="groupEditForm.invalid" class="button is-warning">Редактировать</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

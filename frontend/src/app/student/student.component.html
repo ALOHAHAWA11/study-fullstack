@@ -1,0 +1,45 @@
+<div class="card group-card">
+  <div class="card-content">
+    <h3 class="title">Группа {{group.getName}}</h3>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Имя</th>
+        <th>Дата рождения</th>
+        <th>Номер зачетки</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr tabindex="0" (click)="set_student_id(student.getId)" class="tr-content" *ngFor="let student of group.getStudents">
+        <td>{{student.getName}}</td>
+        <td>{{student.getBirthdate}}</td>
+        <td>{{student.getNumber}}</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <th>Имя</th>
+        <th>Дата рождения</th>
+        <th>Номер зачетки</th>
+      </tr>
+      </tfoot>
+    </table>
+    <div class="columns is-gapless is-centered">
+      <div class="column is-one-quarter">
+        <button class="button is-primary" (click)="openAddDialog()">
+          <img style="width: 15px; height: 15px;" src="https://cdn-icons-png.flaticon.com/512/32/32339.png">
+        </button>
+      </div>
+      <div class="column is-one-quarter">
+        <button class="button is-warning" (click)="openEditDialog()">
+          <img style="width: 15px; height: 15px;" src="https://cdn-icons-png.flaticon.com/512/764/764599.png">
+        </button>
+      </div>
+      <div class="column is-one-quarter">
+        <button class="button is-danger" (click)="deleteStudent()">
+          <img style="width: 15px; height: 15px;" src="https://freesvg.org/img/trash.png">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="card group-card">
+  <div class="card-content">
+    <h3 class="title">Группы</h3>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Номер</th>
+        <th>Группа</th>
+        <th>Студенты</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr tabindex="0" (click)="set_group_id(group.getId)" class="tr-content" *ngFor="let group of groups">
+        <td>{{group.getId}}</td>
+        <td>{{group.getName}}</td>
+        <td><a [routerLink]="['/groups',group.getId]">Просмотреть</a></td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <th>Номер</th>
+        <th>Группа</th>
+        <th>Студенты</th>
+      </tr>
+      </tfoot>
+    </table>
+    <div class="columns is-gapless is-centered">
+      <div class="column is-one-quarter">
+          <button class="button is-primary" (click)="openAddDialog()">
+            <img style="width: 15px; height: 15px;" src="https://cdn-icons-png.flaticon.com/512/32/32339.png">
+          </button>
+      </div>
+      <div class="column is-one-quarter">
+        <button class="button is-warning" (click)="openEditDialog()">
+          <img style="width: 15px; height: 15px;" src="https://cdn-icons-png.flaticon.com/512/764/764599.png">
+        </button>
+      </div>
+      <div class="column is-one-quarter">
+        <button class="button is-danger" (click)="deleteGroup()">
+          <img style="width: 15px; height: 15px;" src="https://freesvg.org/img/trash.png">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

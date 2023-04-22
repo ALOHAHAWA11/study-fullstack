@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-content">
+    <h3 class="title">Добавить группу</h3>
+    <div class="content">
+      <form #groupAddForm="ngForm" (ngSubmit)="onAddSubmit(groupAddForm)">
+        <div class="field">
+          <label class="label">Номер группы:</label>
+          <div class="control">
+            <input name="number" [(ngModel)]="number" required class="input" type="number">
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button type="submit" [disabled]="groupAddForm.invalid" class="button is-primary">Добавить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
